@@ -6,6 +6,8 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
+import { Droppable } from "./droppable";
+import { Draggable } from "./draggble";
 
 export const DnDLayout = () => {
   const mouseSensor = useSensor(MouseSensor, {
@@ -31,7 +33,12 @@ export const DnDLayout = () => {
         onDragStart={() => console.log("Drag started")}
         onDragEnd={() => console.log("Drag ended")}
       >
-        <h1>Drag and Drop</h1>
+        <Draggable>
+          <h1>Drag Me</h1>
+        </Draggable>
+        <Droppable>
+          <h1>Drop Here</h1>
+        </Droppable>
       </DndContext>
     </div>
   );
