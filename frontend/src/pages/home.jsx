@@ -1,7 +1,9 @@
+import { DnDLayout } from "../components/drag-drop/index.jsx";
+
 export const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <DnDLayout />
     </div>
   );
 };
